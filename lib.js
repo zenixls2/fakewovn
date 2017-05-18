@@ -77,6 +77,9 @@
     }
   }
   var previousIndex = 0;
+
+  // Dynamic content crawling
+  getText('', document.getElementsByTagName('html')[0]);
   var observer = new MutationObserver(function(mutations) {
     mutations.slice(previousIndex).forEach(function(mutation) {
       if (mutation.addedNodes.length > 0) {
@@ -92,7 +95,6 @@
   })
   var config = {attributes: true, childList: true, subtree: true,
                 characterData: true};
-  getText('', document.getElementsByTagName('html')[0]);
   observer.observe(document.getElementsByTagName('html')[0], config);
 })();
 // var body = document.getElementsByTagName('body')[0]; var script = document.createElement('script'); script.src="https://localhost:8443/lib.js"; body.appendChild(script);
