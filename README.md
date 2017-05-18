@@ -14,9 +14,9 @@ This is a library that provides a wovn.io like translation functionality on your
 
   put it in your script folder and include it directly, just like how you include jquery:
 
-        ```html
-        <script src="://{SITE_URL}/lib.js"></script>
-        ```
+  ```html
+  <script src="://{SITE_URL}/lib.js"></script>
+  ```
 
 - __Supported Browsers:__
 
