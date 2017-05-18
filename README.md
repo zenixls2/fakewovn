@@ -10,6 +10,13 @@ This is a library that provides a wovn.io like translation functionality on your
 
   Please Refer to MyMemory Translated.net 's [Usage Limit Page](https://mymemory.translated.net/doc/usagelimits.php).
 
+- __How to Start:__
+
+  put it in your script folder and include it directly, just like how you include jquery:
+
+        :::html
+        <script src="://{SITE_URL}/lib.js"></script>
+
 - __Supported Browsers:__
 
   For static page translation, all browsers should apply.
