@@ -1,4 +1,4 @@
-(function () {
+function fakewovn(fromLang, toLang) {
   var result = {};
   var translatedSet = {};
   var getPathTo = function(element) {
@@ -52,7 +52,7 @@
         node.data = translatedSet[node.data];
         console.log(old, node.data);
       } else {
-        translate(node.data, 'en', 'ja', function(data) {
+        translate(node.data, fromLang, toLang, function(data) {
           node.data = data;
           translatedSet[old] = node.data;
           /*if (data.matches.length > 0) {
@@ -96,5 +96,5 @@
   var config = {attributes: true, childList: true, subtree: true,
                 characterData: true};
   observer.observe(document.getElementsByTagName('html')[0], config);
-})();
-// var body = document.getElementsByTagName('body')[0]; var script = document.createElement('script'); script.src="https://localhost:8443/lib.js"; body.appendChild(script);
+};
+// var body = document.getElementsByTagName('body')[0]; var script = document.createElement('script'); script.src="https://localhost:8443/lib.js"; script.onload=(function(){fakewovn("en","ja")}); body.appendChild(script);
